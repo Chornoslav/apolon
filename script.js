@@ -49,13 +49,15 @@ function hellButton(){
     document.querySelector('.playBut').addEventListener("click", document.getElementById('player').play());
 }
 
-const pressed = [];
-const secretCode = 'pes';
+(function unicorns() {
+    const pressed = [];
+    const secretCode = 'pes';
 
-window.addEventListener('keyup', (e) => {
-  pressed.push(e.key);
-  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-  if (pressed.join('').includes(secretCode)) {
-    cornify_add();
-  }
-});
+    window.addEventListener('keyup', function() {
+        pressed.push(e.key);
+        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+        if (pressed.join('').includes(secretCode)) {
+            cornify_add();
+        }
+    });
+})();
