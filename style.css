@@ -1,0 +1,418 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#cornifycount{
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+section {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #C0B3A0;
+  animation: dayToNight 120s linear infinite;
+      z-index: -1;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.paralax {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("http://www.testomic.com/public/codepen-assets/img/paralax/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.paralax .layer {
+  position: absolute;
+  width: 400%;
+}
+
+.paralax .foreground {
+  height: 50%;
+  bottom: 0;
+  background: url("http://www.testomic.com/public/codepen-assets/img/paralax/foreground.png") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 30s linear infinite;
+}
+
+.paralax .hills {
+  height: 40%;
+  bottom: 15%;
+  background: url("http://www.testomic.com/public/codepen-assets/img/paralax/hills.png") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 60s linear infinite;
+}
+
+.paralax .rocks1 {
+  height: 35%;
+  bottom: 25%;
+  background: url("http://www.testomic.com/public/codepen-assets/img/paralax/rocks1.png") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 120s linear infinite;
+}
+
+.paralax .rocks2 {
+  height: 40%;
+  bottom: 15%;
+  background: url("http://www.testomic.com/public/codepen-assets/img/paralax/rocks2.png") repeat-x;
+  background-size: 25% 100%;
+  animation: slideshow 240s linear infinite;
+}
+
+@keyframes slideshow {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -200%;
+  }
+}
+@keyframes dayToNight {
+  0% {
+    -webkit-filter: hue-rotate(0deg) brightness(1);
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  50% {
+    -webkit-filter: hue-rotate(180deg) brightness(0.1);
+    filter: hue-rotate(180deg) brightness(0.1);
+  }
+  100% {
+    -webkit-filter: hue-rotate(0deg) brightness(1);
+    filter: hue-rotate(0deg) brightness(1);
+  }
+}
+/**	
+* Nonatomic Branding
+*/
+#link {
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.img-url {
+  text-decoration: none;
+}
+
+.url {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: purple;
+}
+
+a:active {
+  color: white;
+}
+
+#small-logo {
+  width: 30px;
+  transform: translate(-10px, 12px);
+  opacity: 1;
+}
+.btn-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+  z-index: 999;
+  text-align: center;
+}
+.btn-box .container {
+  width: 100%;
+  text-align: center;
+}
+.btn-box .circle {
+  stroke: #f8aa28;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+.btn-box .playBut {
+  /*  border: 1px solid red;*/
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+}
+.btn-box .playBut .triangle {
+  -webkit-transition: all 0.7s ease-in-out;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: #000;
+  transform: translateY(0);
+}
+.btn-box .playBut:hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #f8aa28;
+  animation: nudge 0.7s ease-in-out;
+}
+@keyframes nudge {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.btn-box .playBut:hover .circle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+.text-pop-up-bottom {
+  -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          font-size: 42px;
+}
+.fade-bg {
+  color: orange;
+  font-size: 52px;
+  text-align: center;
+  font-weight: bold;  
+  cursor: default;
+   
+  animation-duration: 6s;
+  animation-name: fade-bg;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+
+}
+
+@keyframes fade-bg {
+    0% {
+        opacity: 0;
+    }    
+    25% {
+        opacity: 1;
+    }    
+    50% {
+        opacity: 0;
+    }    
+    51% {
+        opacity: 0;
+    }    
+    75% {
+        opacity: 1;
+    }    
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Infant');
+body{
+  font-family: 'Cormorant Infant', serif;
+}
+p {
+    text-indent: 20px;
+   }
+.characters{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  opacity: 0;
+  transition: all linear 2s;
+}
+.characters .character{
+  min-width: 33%;  
+  cursor: pointer;
+  text-align: center;
+}
+.characters .character img{
+      height: 15rem;
+    width: 15rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
+}
+.characters .character:hover span{
+  color: orange;
+  transition: all linear 0.5s;
+  transform: scale(1.2);
+  display: inline-block;
+}
+.characters .character span{
+  color: white;
+  font-size: 32px;
+  font-style: italic;
+  transition: all linear 0.5s;
+  display: inline-block;
+}
+.info{
+  opacity: 0;
+  position: absolute;
+  z-index: 111;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5s ease-in-out;
+}
+.info .container{  
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+}
+.info .container .profile{
+  align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    display: flex;
+    float: left;
+    margin: 0 25px 15px 0;
+}
+.info .container .profile img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.info .container .profile .name h2{
+  color: white;
+  font-size: 36px;
+  margin: 0;
+}
+.info .container .profile .name h2 + h2{
+  margin-left: 15px;
+}
+.info .container .profile .name{
+  margin-left: 25px;
+  height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info .main p{
+  font-size: 18px;
+  color: #fff;
+}
+
+.info .container .gallery{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.info .container .gallery img{
+      height: auto;
+    border-radius: 5%;
+    transition: all 0.3s ease-in-out;
+    max-height: 220px;
+    max-width: 25%;
+}
+.info .container .gallery img:hover{
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.info .btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.info .btns div{
+  border: 2px solid orange;
+  border-radius: 10px;
+  font-size: 32px;
+  color: orange;
+  padding: 5px 15px;
+  transition: all 0.3s linear;
+}
+.info .btns div:hover{
+  color: white;
+  background-color: orange;
+  transition: all 0.3s linear;
+}
+.info .main{
+  height: 450px;
+  overflow-y: overlay;
+}
+.info .main p{
+  font-family: TimesNewRoman;
+}
+
+
+
+
+
+::selection {
+  background: orange;
+}
+.none{
+  opacity: 0 !important;
+  transition: all linear 2s;
+  pointer-events: none;
+}
+.display{
+  opacity: 1 !important;
+  transition: all linear 2s;
+  z-index: 999999999999999;
+}
